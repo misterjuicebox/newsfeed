@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <script src = "angular/angular.js"></script>
+    <script src="angular-route/angular-route.js"></script>
+    <script src = "jquery/dist/jquery.min.js"></script>
+    <script src = "bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+    <script src = "controllers/userController.js"></script>
+    <script src = "factories/userFactory.js"></script>
+    <script src = "controllers/newsController.js"></script>
+    <script src = "factories/newsFactory.js"></script>
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>NewsFeed</title>
+</head>
+
+<body ng-app='app'>
+    
+    <div ng-controller="userController">
+
+    </div>
+    <div ng-view="" class="container-fluid">
+
+    
+    </div>
+
+</body>
+</html>

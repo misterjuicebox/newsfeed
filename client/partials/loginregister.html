@@ -1,0 +1,23 @@
+<div class='loginregister'>
+<div class="row">
+  
+  <div class="col-md-4"></div>
+  
+  <div class="col-md-4 center-block" id="loginForm">
+    
+    <h1>Login and Register</h1>
+
+    <form ng-submit="login()" method="post">
+      <div class='form-group'>
+        <label for="name">Name:</label>
+        <input class='form-control' type="text" ng-model="newUser.name" placeholder='Name'>
+      </div>
+      <input type="submit" class="btn btn-primary" value="Login or Register">
+      <p>{{ error }}</p>
+    </form>
+  </div>
+
+  <div class="col-md-4"></div>
+
+</div>
+</div>

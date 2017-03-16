@@ -1,0 +1,56 @@
+    <nav ng-if="currentUser._id != null" class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#!/newsfeed">NewsFeed</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#!/user"><span class="glyphicon"></span>Welcome, {{ currentUser.name }}</a></li>
+                <li><a href="/logout"><span class="glyphicon"></span> Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<div class='newsFeed'>
+<div class="col-md-6 center-block" id="postNewsForm" ng-controller="newsController">
+    <h1 class="topic">News</h1> 
+    <div class="allNews" ng-repeat="new in news | orderBy: '-createdAt'">
+    
+    <div class="author" >
+        <h4><a href="#!/user/{{ new._userId }}">{{ new._userName }}:</a></h4>
+    </div>
+    <div class="news">    
+        <h2><a href="#!/news/{{ new._id }}">{{ new.headline }}</a></h2>
+        <h3>{{ new.story }}</h3>
+        <button ng-show="new._userLikes.indexOf(currentUser._id) < 0" ng-click="like(new._id)" class="btn btn-primary">Like</button>
+        <button  ng-show="new._userLikes.indexOf(currentUser._id) > -1" ng-click="unlike(new._id)" class="btn btn-warning">Unlike</button>
+        <h5>Likes: {{ new.likes }}</h5>
+    </div>
+</div>
+</div>
+
+<div class="col-md-6 center-block" id="postNewsForm" ng-controller="newsController">
+
+<div class="shareNews formBlock">
+
+    <h1>Share Some News</h1>
+
+    <form ng-submit="postNews()" method="post">
+      <div class='form-group'>
+        <label for="name">Headline:</label>
+        <input class='form-control' type="text" ng-model="newNews.headline" placeholder='Headline'>
+      </div>
+      <div class='form-group'>
+        <label for="name">Story:</label>
+        <textarea class="form-control" rows="3" ng-model="newNews.story" placeholder="Story"></textarea>
+      </div>
+      <input type="submit" class="btn btn-primary" value="Post News">
+      <p>{{ postNewsError }}</p>
+    </form>
+</div>
+
+</div>
+
+  <div class="col-md-3"></div>
+
+
+</div>

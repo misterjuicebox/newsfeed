@@ -1,0 +1,110 @@
+/*********** SiteWide *************/
+
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+    height: 100%;
+}
+
+.navbar-default {
+    padding: 0 3rem 0 3rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    
+}
+
+.navbar {
+    margin-bottom: 0 !important;
+
+}
+
+.formBlock, .topic{
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    padding: 1rem 3rem 1rem 3rem;
+    }
+
+body {
+      background: url('../img/mikael-cho-214358.jpg') no-repeat center center fixed; 
+        background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: 0% 0%;
+        height:100vh;
+}
+
+
+
+
+/*********** Login & Register *************/
+
+.loginregister { 
+   
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height:100vh;
+}
+
+#loginForm {
+    margin-top: 25rem;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem 3rem 1rem 3rem;
+}
+
+/*********** NewsFeed *************/
+
+.shareNews{
+    position: fixed;
+    margin-top: 2rem;
+    width: 45%;
+}
+
+#postNewsForm {
+    margin-top: 5rem;
+}
+
+.allNews {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    
+}
+
+.news {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    padding: .1rem 2rem 1rem 2rem;
+    background-color: rgba(255, 255, 255, 0.8); 
+    display: inline-block; 
+    width: 80%
+}
+
+.author {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    padding: .1rem 2rem 1rem 2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    width: 19%;
+    vertical-align: top;
+}
+
+.user {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    padding: .1rem 2rem 1rem 2rem;
+    background-color: rgba(255, 255, 255, 0.8); 
+    display: inline-block; 
+}
